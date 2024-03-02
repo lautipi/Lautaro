@@ -1,0 +1,75 @@
+const ford = 10000000
+const fiat = 18000000
+const volkswagen = 52000000
+const nissan = 32000000
+const renault = 7000000
+const impuesto = 1.5
+alert("Bienvenido")
+let comprar = prompt("¿Desea comprar?")
+if ((comprar == "SI") || (comprar == "si") || (comprar == "Si") || (comprar == "sI")){
+    let metodoPago = prompt("Desea pagar con efectivo o credito?" + "\n " + "\nAbonando en efectivo tiene un 10% de descuento" + "\nAbonando con credito tiene 5% de recargo");
+    let dato = Number(prompt("1) Ford Fiesta" + "\n2) Fiat Cronos" + "\n3) Volkswagen Amarok" + "\n4) Nissan Kicks" + "\n5) Renault Clio" + "\n " + "\n(Debe seleccionar una opcion del 1 al 5)"));
+        switch(metodoPago){
+            case "efectivo" || "EFECTIVO":
+                switch(dato){
+                    case 1:
+                        fiesta = (ford - (ford/10));
+                        document.write("Su total a pagar es de " + fiesta + " pesos");
+                        break;
+                    case 2: 
+                        cronos = (fiat - (fiat/10));
+                        document.write("Su total a pagar es de " + cronos + " pesos"); 
+                        break;
+                    case 3:
+                        amarok = (volkswagen - (volkswagen/10));
+                        document.write("Su total a pagar es de " + amarok + " pesos");
+                        break;
+                    case 4:
+                        kicks = (nissan - (nissan/10));
+                        document.write("Su total a pagar es de " + kicks + " pesos");
+                        break;
+                    case 5:
+                        clio = (renault - (renault/10));
+                        document.write("Su total a pagar es de " + clio + " pesos");
+                        break;
+                    default:
+                        alert("No ha seleccionado una opcion válida")
+                        document.write("Recargue la página y vuelva a intentarlo")
+                        break;
+                break;
+             }
+            case "credito":
+                switch(dato){
+                    case 1:
+                        fiesta = (ford * impuesto);
+                        document.write("Su total a pagar es de " + fiesta + " pesos");
+                        break;
+                    case 2: 
+                        cronos = (fiat * impuesto);
+                        document.write("Su total a pagar es de " + cronos + " pesos"); 
+                        break;
+                    case 3:
+                        amarok = (volkswagen * impuesto);
+                        document.write("Su total a pagar es de " + amarok + " pesos");
+                        break;
+                    case 4:
+                        kicks = (nissan * impuesto);
+                        document.write("Su total a pagar es de " + kicks + " pesos");
+                        break;
+                    case 5:
+                        clio = (renault * impuesto);
+                        document.write("Su total a pagar es de " + clio + " pesos");
+                        break;
+                    default:
+                        alert("No ha seleccionado una opcion válida");
+                        document.write("Recargue la página y vuelva a intentarlo");
+                break;
+             }
+             default:
+                alert("No se acepta ese método de pago");
+                document.write("Recarge la página y vuelva a intentarlo");
+
+}
+} else {
+    alert("Si desea comprar ingrese si. Si no es asi, retirece por favor")
+    document.write("Recargue la página y vuelca a intentarlo")
